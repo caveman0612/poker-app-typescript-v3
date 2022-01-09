@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* margin: 2em; */
+}
+
+header {
+  background-color: aqua;
+  height: 4em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header h1 {
+  margin-left: 2em;
+}
+
+.Selector {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  margin-left: 3.5em;
+}
+
+.buttonSection {
+  display: flex;
+  flex-direction: row;
+}
+
+.Button {
+  margin: 0.3em;
+}
+
+.Row {
+  display: flex;
+  flex-direction: row;
+  margin: 0.3em 0;
+}
+
+.Card img {
+  width: 2.5em;
+  margin: 0.3em;
+}
+
+.Board {
+  width: 45em;
+  height: 20em;
+  border: black 3px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 3.5em;
+  border-radius: 2em;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.bottomRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.Villian {
+  display: flex;
+  width: 9em;
+  justify-content: center;
+  align-self: center;
+}
+
+.Player {
+  width: 9em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
