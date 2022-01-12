@@ -12,6 +12,7 @@ const Row = ({ suit, setCards, cards }: any) => {
     "7",
     "8",
     "9",
+    "T",
     "J",
     "Q",
     "K",

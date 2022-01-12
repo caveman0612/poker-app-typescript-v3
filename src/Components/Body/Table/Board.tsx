@@ -7,15 +7,15 @@ const Board = ({ setCards, cards }: any) => {
   return (
     <div className="Board">
       <div className="topRow">
-        <Villian />
-        <Villian />
-        <Villian />
+        <Villian cards={cards} setCards={setCards} position={1} />
+        <Villian cards={cards} setCards={setCards} position={2} />
+        <Villian cards={cards} setCards={setCards} position={3} />
       </div>
-      <CenterCards />
+      <CenterCards cards={cards} setCards={setCards} />
       <div className="bottomRow">
-        <Villian />
+        <Villian cards={cards} setCards={setCards} position={0} />
         <Player cards={cards} setCards={setCards} />
-        <Villian />
+        <Villian cards={cards} setCards={setCards} position={4} />
       </div>
     </div>
   );

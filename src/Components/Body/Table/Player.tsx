@@ -6,15 +6,13 @@ const Player = ({ setCards, cards }: any) => {
   return (
     <div className="Player">
       {holeCards.map((item: string) => {
-        // console.log(item);
+        const [suit, card] = item.split("");
         return (
-          <Card
-            suit={item[0]}
-            card={item[1]}
-            cards={cards}
-            setCards={setCards}
-            key={`H${item[0]}${item[1]}`}
-          />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/${suit}/${card}.png`}
+            alt={`${suit}${card}`}
+            key={`H${suit}${card}`}
+          ></img>
         );
       })}
     </div>

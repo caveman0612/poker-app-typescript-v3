@@ -7,9 +7,9 @@ import Controller from "./Components/Body/Selector/Controller";
 const App = () => {
   const [cards, setCards] = useState({
     holeCards: ["HA", "HK"],
-    tableCards: [],
+    tableCards: ["S7", "H3", "D8"],
     selectedCards: [],
-    villians: Array(5),
+    villians: Array(5).fill(false),
   });
   return (
     <div className="App">
