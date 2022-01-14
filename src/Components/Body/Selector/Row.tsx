@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "./Card";
 
-const Row = ({ suit, setCards, cards }: any) => {
+const Row = ({ suit, setBoard, board }: any) => {
   const cardValues = [
     "A",
     "2",
@@ -24,8 +24,8 @@ const Row = ({ suit, setCards, cards }: any) => {
           <Card
             suit={suit}
             card={card}
-            cards={cards}
-            setCards={setCards}
+            board={board}
+            setBoard={setBoard}
             key={`${suit}${card}`}
           />
         );

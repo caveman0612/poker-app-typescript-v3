@@ -1,10 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-}
-
-body {
-  /* margin: 2em; */
+  box-sizing: border-box;
 }
 
 header {
@@ -90,27 +87,54 @@ header h1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  height: 6em;
+  min-height: 4em;
+  position: relative;
+  bottom: 1em;
 }
 
 .CenterCards img {
-  width: 50px;
   margin: 0.5em;
 }
 
 .Villian {
   display: flex;
+  flex-direction: column;
   width: 9em;
   justify-content: center;
+  text-align: center;
   align-self: center;
+  height: 10em;
 }
 
-.addMoney {
-  width: 6em;
+.ActiveVillian {
+  border: black 1px solid;
+  border-radius: 1em;
+}
+
+.top {
+  position: relative;
+  top: 1em;
+}
+
+.middle {
+  position: relative;
+  bottom: 2em;
+}
+
+.bottom {
+  position: relative;
+  bottom: 2em;
+}
+
+.buttonLocation {
+  width: 1.5em;
+  height: 1.5em;
+  /* border-radius: 50%; */
 }
 
 .Player {
+  position: relative;
+  top: 3em;
   width: 9rem;
   display: flex;
   flex-direction: row;
@@ -120,6 +144,13 @@ header h1 {
 }
 
 .Player img {
-  width: 50px;
+  width: 40px;
   margin: 0.5em;
+}
+
+footer {
+  margin-top: 3em;
+  background-color: grey;
+  text-align: center;
+  padding: 1em;
 }

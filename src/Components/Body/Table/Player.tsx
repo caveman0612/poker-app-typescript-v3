@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Card from "../Selector/Card";
 
-const Player = ({ setCards, cards }: any) => {
-  const { holeCards, selectedCards } = cards;
+const Player = ({ setBoard, board }: any) => {
+  const { holeCards, selectedCards } = board;
   return (
     <div className="Player">
       {holeCards.map((item: string) => {

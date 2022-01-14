@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-const CenterCards = ({ setCards, cards }: any) => {
+const CenterCards = ({ setBoard, board }: any) => {
   return (
     <div className="CenterCards">
-      {cards.tableCards.map((item: string) => {
+      {board.tableCards.map((item: string) => {
         const [suit, card] = item.split("");
         return (
           <img

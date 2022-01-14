@@ -3,22 +3,20 @@ import CenterCards from "./CenterCards";
 import Player from "./Player";
 import Villian from "./Villian";
 
-const Board = ({ setCards, cards }: any) => {
-  return (
-    <div className="Board">
-      <div className="topRow">
-        <Villian cards={cards} setCards={setCards} position={1} />
-        <Villian cards={cards} setCards={setCards} position={2} />
-        <Villian cards={cards} setCards={setCards} position={3} />
-      </div>
-      <CenterCards cards={cards} setCards={setCards} />
-      <div className="bottomRow">
-        <Villian cards={cards} setCards={setCards} position={0} />
-        <Player cards={cards} setCards={setCards} />
-        <Villian cards={cards} setCards={setCards} position={4} />
-      </div>
+const Board = ({ setBoard, board }: any) => (
+  <div className="Board">
+    <div className="topRow">
+      <Villian board={board} setBoard={setBoard} position={1} />
+      <Villian board={board} setBoard={setBoard} position={2} />
+      <Villian board={board} setBoard={setBoard} position={3} />
     </div>
-  );
-};
+    <CenterCards board={board} setBoard={setBoard} />
+    <div className="bottomRow">
+      <Villian board={board} setBoard={setBoard} position={0} />
+      <Player board={board} setBoard={setBoard} />
+      <Villian board={board} setBoard={setBoard} position={4} />
+    </div>
+  </div>
+);
 
 export default Board;

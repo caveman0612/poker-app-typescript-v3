@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const Card = ({ suit, card, cards, setCards }: any) => {
+const Card = ({ suit, card, board, setBoard }: any) => {
   function highlightedCards(name: string) {
-    if (cards.holeCards.includes(name) || cards.tableCards.includes(name)) {
+    if (board.holeCards.includes(name) || board.tableCards.includes(name)) {
       return "selectedLocked";
-    } else if (cards.selectedCards.includes(name)) {
+    } else if (board.selectedCards.includes(name)) {
       return "selected";
     }
     return "";
@@ -12,18 +12,18 @@ const Card = ({ suit, card, cards, setCards }: any) => {
 
   function selectCard(event: any) {
     const name = event.target.alt;
-    if (cards.holeCards.includes(name) || cards.tableCards.includes(name)) {
+    if (board.holeCards.includes(name) || board.tableCards.includes(name)) {
       return;
     }
-    if (!cards.selectedCards.includes(name)) {
-      setCards((prev: any) => {
+    if (!board.selectedCards.includes(name)) {
+      setBoard((prev: any) => {
         return {
           ...prev,
           selectedCards: [...prev.selectedCards, name],
         };
       });
     } else {
-      setCards((prev: any) => {
+      setBoard((prev: any) => {
         return {
           ...prev,
           selectedCards: prev.selectedCards.filter(

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Buttons from "./Buttons";
 import Row from "./Row";
 
-const Selector = ({ setCards, cards }: any) => {
+const Selector = ({ setBoard, board }: any) => {
   const suits = ["C", "D", "H", "S"];
   const cardValues = [
     "A",
@@ -33,13 +33,13 @@ const Selector = ({ setCards, cards }: any) => {
             <Row
               suit={suit}
               key={`${suit}`}
-              cards={cards}
-              setCards={setCards}
+              board={board}
+              setBoard={setBoard}
             />
           );
         })}
       </div>
-      <Buttons cards={cards} setCards={setCards} />
+      <Buttons board={board} setBoard={setBoard} />
     </div>
   );
 };

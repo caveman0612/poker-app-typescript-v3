@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const Buttons = ({ name, cards, setCards }: any) => {
+const Buttons = ({ board, setBoard }: any) => {
   function resetAllCards() {
-    setCards((prev: any) => {
+    setBoard((prev: any) => {
       return {
         ...prev,
         holeCards: [],
@@ -13,8 +13,8 @@ const Buttons = ({ name, cards, setCards }: any) => {
   }
 
   function addHoleCards() {
-    if (cards.selectedCards.length === 2) {
-      setCards((prev: any) => {
+    if (board.selectedCards.length === 2) {
+      setBoard((prev: any) => {
         return {
           ...prev,
           holeCards: [...prev.selectedCards],
@@ -27,8 +27,8 @@ const Buttons = ({ name, cards, setCards }: any) => {
   }
 
   function addFlopCards() {
-    if (cards.selectedCards.length === 3) {
-      setCards((prev: any) => {
+    if (board.selectedCards.length === 3) {
+      setBoard((prev: any) => {
         return {
           ...prev,
           tableCards: [...prev.selectedCards],
@@ -39,8 +39,8 @@ const Buttons = ({ name, cards, setCards }: any) => {
   }
 
   function addTurnCards() {
-    if (cards.selectedCards.length === 1 && cards.tableCards.length === 3) {
-      setCards((prev: any) => {
+    if (board.selectedCards.length === 1 && board.tableCards.length === 3) {
+      setBoard((prev: any) => {
         return {
           ...prev,
           tableCards: [...prev.tableCards, ...prev.selectedCards],
@@ -51,8 +51,8 @@ const Buttons = ({ name, cards, setCards }: any) => {
   }
 
   function addRiverCards() {
-    if (cards.selectedCards.length === 1 && cards.tableCards.length === 4) {
-      setCards((prev: any) => {
+    if (board.selectedCards.length === 1 && board.tableCards.length === 4) {
+      setBoard((prev: any) => {
         return {
           ...prev,
           tableCards: [...prev.tableCards, ...prev.selectedCards],
