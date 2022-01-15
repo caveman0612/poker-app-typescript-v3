@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ActionButtons from "./ActionButtons";
 
 const ActiveVillian = ({ setBoard, board, position }: any) => {
   const { villians } = board;
@@ -18,12 +19,7 @@ const ActiveVillian = ({ setBoard, board, position }: any) => {
   return (
     <div className="ActiveVillian">
       <button onClick={removeVillian}>X</button>
-      <div className="actionButtons">
-        <button>fold</button>
-        <button>call</button>
-        <button>raise</button>
-      </div>
-      <input type="checkbox" className="buttonLocation" />
+      <ActionButtons />
     </div>
   );
 };

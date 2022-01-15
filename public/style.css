@@ -6,7 +6,7 @@
 
 header {
   background-color: aqua;
-  height: 4em;
+  height: 3em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,7 +19,7 @@ header h1 {
 .Selector {
   display: flex;
   flex-direction: column;
-  margin: 2em;
+  margin: 0.5em;
   margin-left: 3.5em;
 }
 
@@ -38,13 +38,13 @@ header h1 {
 }
 
 .letterRow {
-  width: 40.5em;
+  width: 34em;
   display: flex;
   justify-content: space-around;
 }
 
 .Card img {
-  width: 2.5em;
+  width: 2em;
   margin: 0.3em;
 }
 
@@ -98,17 +98,20 @@ header h1 {
 
 .Villian {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   width: 9em;
   justify-content: center;
   text-align: center;
-  align-self: center;
+  /* align-self: center; */
   height: 10em;
 }
 
 .ActiveVillian {
   border: black 1px solid;
   border-radius: 1em;
+}
+.ActiveVillian button {
+  margin: 0.2em;
 }
 
 .top {
@@ -134,18 +137,44 @@ header h1 {
 
 .Player {
   position: relative;
-  top: 3em;
+
   width: 9rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  height: 6em;
+  height: 10em;
+  /* background-color: hotpink; */
+}
+
+.holeCards {
+  height: 4.5em;
+  /* background-color: indigo; */
 }
 
 .Player img {
   width: 40px;
   margin: 0.5em;
+}
+
+.playerButtons {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.playerButtons button {
+  margin: 0.3em;
+}
+
+.action {
+  padding: 0.2em;
+  background-color: white;
+  /* box-shadow: 500px 500px black; */
+  border-radius: 20%;
+}
+.action:hover {
+  background-color: black;
+  color: white;
 }
 
 footer {
